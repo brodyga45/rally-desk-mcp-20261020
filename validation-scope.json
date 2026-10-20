@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-20T17:28:44.357371+00:00",
+  "author_method": "Coding agent underbrodyga45 businessdirection",
+  "domain_checks": {
+    "passed": 8,
+    "commands_exit": 0,
+    "score_pairs_against_original_Cpp": 2883,
+    "reachable_final_states": 180,
+    "six_rounds_players": 12,
+    "courts": 2,
+    "rounds": 6,
+    "completed_games_each": 4,
+    "partner_repeats_in_that_run": 0,
+    "suite_wall_seconds": 6.9909
+  },
+  "HTTP_checks": {
+    "protocol": "2025-11-25",
+    "passed": true,
+    "request_count": 14,
+    "checks": [
+      "initialize2025-11-25",
+      "initialized notification",
+      "5tools discovered",
+      "actual planning/commit/results",
+      "retry exactly once",
+      "stale write rejected",
+      "prematurely completed score rejected",
+      "correction audit",
+      "foreign origin rejected"
+    ]
+  },
+  "browser_check": {
+    "actual_MCP_requests": 11,
+    "final_version": 5,
+    "completed_results": 2,
+    "same_write_replay_no_duplicate": true,
+    "correction_history_preserved": true,
+    "previously_resting_players_in_next_preview": true,
+    "synthetic_labels_only": true
+  },
+  "code_sha256": {
+    "domain.py": "326c129eae82df164c9070df3d32531277bf3edaa37b7ef71f2330a24746970f",
+    "server.py": "ac1fa2d9e321f37ffa6812197a235cbceb747d98d01e8fe516efc5432d61c2b2",
+    "web/index.html": "e0d51469431718e304397a25978ba654e717c2e7262dce913152a9b27d3e44e8"
+  },
+  "not_verified": [
+    "ActualAlexa/privatepreview",
+    "Watchsynchronisationorhardware",
+    "Humanrevieworrealplayerplaytest",
+    "Globaltournamentoptimality",
+    "Windows/Linuxruntime",
+    "Contestentry/acceptance/award/payment"
+  ],
+  "new_cash_spend": 0,
+  "live_language_model_calls": 0,
+  "allocated_compute_and_agent_cost": null
+}

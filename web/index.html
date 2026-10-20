@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rally Desk · Club night, under control</title>
+<style>
+:root{color-scheme:dark;--bg:#101918;--panel:#172422;--line:#30433e;--muted:#a7bbb4;--ink:#f3f7ef;--green:#c4f28b;--gold:#edc978;--red:#ffaaa1}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif}main{max-width:1240px;margin:auto;padding:32px 28px 48px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:24px}.brand{font-size:23px;font-weight:750;letter-spacing:-.7px}.logo{display:inline-grid;place-items:center;width:36px;height:36px;border:1px solid var(--green);border-radius:11px;margin-right:12px;color:var(--green)}.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--green);font-weight:700}.tag{display:inline-block;border:1px solid var(--line);border-radius:30px;padding:5px 12px;color:var(--muted);font-size:12px}h1{font-size:clamp(34px,5vw,56px);line-height:1.12;letter-spacing:-2px;max-width:750px;margin:16px 0}h2{font-size:21px;letter-spacing:-.5px;margin:0 0 8px}h3{font-size:16px;margin:0 0 12px}p{margin:8px 0}.intro{padding:26px 0 24px}.muted{color:var(--muted)}.layout{display:grid;grid-template-columns:310px 1fr;gap:22px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:20px}.aside .panel{padding:20px}label{display:block;color:var(--muted);font-size:13px;margin:14px 0 6px}input,textarea,select{width:100%;border:1px solid #40554c;border-radius:9px;background:#101b18;color:var(--ink);font:inherit;padding:10px 12px}textarea{resize:vertical;min-height:95px;font-size:14px}button{cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:10px 16px;font:600 14px system-ui;background:#21332c;color:var(--ink);min-height:42px}button.primary{background:var(--green);border-color:var(--green);color:#182519}button:disabled{cursor:default;opacity:.48}button:hover:not(:disabled){filter:brightness(1.12)}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.row{display:flex;gap:12px;align-items:center}.row>*{flex:1}.spaced{justify-content:space-between}.spaced>*{flex:initial}.small{font-size:13px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}.full{width:100%;margin-top:18px}.status{min-height:26px;color:var(--green);padding:0 2px;margin-bottom:16px}.status.error{color:var(--red)}.stats{display:flex;gap:24px;flex-wrap:wrap;margin:16px 0}.stat strong{display:block;font-size:30px;line-height:1.2}.stat span{font-size:12px;color:var(--muted)}.players{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}.player{font:12px ui-monospace,monospace;border:1px solid var(--line);padding:5px 9px;border-radius:7px}.plan-grid,.courts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.court{border:1px solid var(--line);border-radius:12px;padding:16px;background:#12201b}.court .eyebrow{margin-bottom:12px}.team{font-size:18px;font-weight:650;letter-spacing:-.4px}.vs{font-size:12px;color:var(--muted);padding:6px 0}.rest{padding:14px 0 0;color:var(--gold);font-size:14px}.explain{border-top:1px solid var(--line);margin-top:16px;padding-top:14px;font-size:13px;color:var(--muted)}.empty{padding:28px 14px;border:1px dashed #3e554b;border-radius:12px;color:var(--muted);text-align:center}.score-form label{font-size:12px}.score-form input{font-size:24px;text-align:center;font-variant-numeric:tabular-nums}.score-form button{margin-top:14px;width:100%}details{border-top:1px solid var(--line);padding:14px 0}summary{cursor:pointer;color:var(--muted);font-size:14px}.result-title{color:var(--ink);font-weight:600}.result-score{color:var(--green);font-variant-numeric:tabular-nums}.audit{list-style:none;padding:0;margin:12px 0 0;font-size:13px}.audit li{padding:9px 0;border-bottom:1px solid var(--line)}.audit b{display:inline-block;color:var(--green);min-width:32px}pre{max-height:340px;overflow:auto;white-space:pre-wrap;word-break:break-word;font-size:11px;background:#0c1511;padding:14px;border-radius:8px}.protocol{margin-top:4px}footer{margin-top:25px;color:var(--muted);font-size:12px}.hidden{display:none!important}@media(max-width:900px){.layout{grid-template-columns:1fr}.aside{display:grid;grid-template-columns:1fr 1fr;gap:18px}.aside .panel{margin:0}h1{letter-spacing:-1.3px}}@media(max-width:600px){main{padding:20px 16px}.aside,.plan-grid,.courts{grid-template-columns:1fr}.panel{padding:17px}header{align-items:flex-start}.tag{max-width:140px;text-align:center}.stats{gap:18px}}
+</style>
+<main>
+<header><div class="brand"><span class="logo" aria-hidden="true">R</span>Rally Desk</div><span class="tag">Local assistant demo</span></header>
+<section class="intro"><div class="eyebrow">Less organising. More playing.</div><h1>A fair next round.<br>A result you can trust.</h1><p class="muted">Rotate partners, keep the courts moving, and correct a score without losing its history.</p></section>
+<div id="notice" class="status" role="status" aria-live="polite">Connecting to your local club desk…</div>
+<div class="layout">
+<aside class="aside">
+<section class="panel"><h2>Set up a club night</h2><p class="muted small">4–12 players. Use nicknames or the sample labels below.</p>
+<form id="createForm"><label for="players">Player labels, separated by commas</label><textarea id="players" required>P01, P02, P03, P04, P05, P06, P07, P08, P09, P10, P11, P12</textarea>
+<div class="row"><div><label for="courtCount">Courts</label><select id="courtCount"><option value="1">1 court</option><option value="2" selected>2 courts</option></select></div><div><label for="target">Target</label><select id="target"><option>11</option><option>15</option><option>21</option></select></div></div>
+<p class="muted small">Casual scoring: win by two, cap at 30. This is not an official sport ruleset.</p><button class="primary full" type="submit">Start a club night</button></form></section>
+<section class="panel"><h3>Participation</h3><div id="participation" class="muted small">Your completed-game counts will appear here.</div><div class="actions"><button id="refresh" type="button" disabled>Refresh desk</button><button id="retry" type="button" disabled>Retry last write</button></div><p class="small muted">A retry keeps the same receipt, so a repeated request cannot count twice.</p></section>
+</aside>
+<div>
+<section class="panel"><div class="row spaced"><h2 id="nightTitle">Your next round</h2><span id="version" class="tag">No session</span></div>
+<div class="stats"><div class="stat"><strong id="roundNumber">—</strong><span>current round</span></div><div class="stat"><strong id="finished">0</strong><span>recorded matches</span></div><div class="stat"><strong id="gap">—</strong><span>completed-game gap</span></div></div>
+<div id="plan" class="empty">Start a club night to see a proposed round.</div><div class="actions"><button id="preview" class="primary" disabled>Preview next round</button><button id="commit" disabled>Confirm this round</button></div></section>
+<section class="panel"><h2>On court</h2><p class="muted small">A is the first pair, B is the second. Record the completed result after the match.</p><div id="courts" class="courts"><div class="empty">No active matches yet.</div></div></section>
+<section class="panel"><h2>Recorded results</h2><p class="muted small">Mistake on the desk? Open a result to add a reason and correct it.</p><div id="results"></div></section>
+<section class="panel"><h2>Desk history</h2><p class="muted small">Every accepted change gets a version and a receipt.</p><ol id="audit" class="audit"></ol></section>
+</div>
+</div>
+<details class="protocol"><summary>Connection activity · for demo reviewers</summary><p id="connection" class="small muted">Not connected</p><pre id="trace">Waiting for MCP connection.</pre></details>
+<footer>Simulated Alexa+ assistant surface using a real local MCP client. No Alexa device connection or watch synchronisation. Default storage is temporary test data.</footer>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+let state=null,proposal=null,ready=false,busy=false,counter=0,lastWrite=null;
+const trace=[];
+function notice(message,error=false){$('notice').textContent=message;$('notice').className='status'+(error?' error':'');}
+function element(tag,text,className=''){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;}
+function log(item){trace.push(item);if(trace.length>30)trace.shift();$('trace').textContent=JSON.stringify(trace,null,2);}
+async function rpc(method,params={},notification=false){
+ const request={jsonrpc:'2.0',method,params};if(!notification)request.id=++counter;
+ const response=await fetch('/mcp',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json, text/event-stream','MCP-Protocol-Version':'2025-11-25'},body:JSON.stringify(request)});
+ const text=await response.text();let body;try{body=text?JSON.parse(text):null;}catch{log({request,status:response.status,response:text});throw Error('The desk returned an unreadable response. Refresh before a new action.');}
+ log({request,status:response.status,response:body});
+ if(!response.ok||body?.error)throw Error(body?.error?.message||'Connection failed. A write may have arrived; use Retry last write before making another one.');
+ return body?.result;
+}
+async function tool(name,args){
+ const result=await rpc('tools/call',{name,arguments:args});
+ if(result.isError)throw Error(result.content?.map(c=>c.text||'').join('\n')||'The desk rejected this action.');
+ return result.structuredContent??JSON.parse(result.content.filter(c=>c.type==='text').map(c=>c.text).join('\n'));
+}
+function accept(next){state=next;localStorage.setItem('rallyDeskSession',state.session_id);if(proposal&&proposal.expected_version!==state.version)proposal=null;}
+async function write(name,args){lastWrite={name,args:{...args,request_id:crypto.randomUUID()}};const result=await tool(lastWrite.name,lastWrite.args);accept(result.state);notice(result.replayed?'This request was already recorded. No duplicate change.':'Saved to the desk.');return result;}
+async function guarded(fn){if(busy)return;busy=true;renderButtons();try{await fn();}catch(e){notice(e.message,true);}finally{busy=false;render();}}
+function renderButtons(){document.querySelectorAll('button').forEach(b=>b.disabled=busy||!ready);$('refresh').disabled=busy||!ready||!state;$('preview').disabled=busy||!ready||!state||state.matches.some(m=>m.status==='pending');$('commit').disabled=busy||!ready||!proposal;$('retry').disabled=busy||!ready||!lastWrite;}
+function pair(team){return team.join(' + ');}
+function renderPlan(){
+ const area=$('plan');area.replaceChildren();
+ if(!proposal){area.className='empty';area.textContent=!state?'Start a club night to see a proposed round.':state.matches.some(m=>m.status==='pending')?'Finish the current matches before planning another round.':'Preview the next round. Nothing changes until you confirm it.';return;}
+ area.className='';const grid=element('div',undefined,'plan-grid');
+ for(const court of proposal.courts){const card=element('div',undefined,'court');card.append(element('div','Court '+court.court,'eyebrow'),element('div',pair(court.teams[0]),'team'),element('div','versus','vs'),element('div',pair(court.teams[1]),'team'));grid.append(card);}area.append(grid);
+ area.append(element('div','Resting this round: '+(proposal.resting.join(', ')||'Nobody'),'rest'));
+ const e=proposal.explanation;area.append(element('div',`Least completed games first · ${e.prior_partner_occurrences} previous partner pairings repeated · projected game-count gap ${e.projected_game_count_gap}. This optimises the next round, not an entire tournament.`,'explain'));
+}
+function scoreForm(match,correcting=false){
+ const form=element('form',undefined,'score-form');const row=element('div',undefined,'row');
+ for(let i=0;i<2;i++){const cell=element('div');const label=element('label',(i?'B: ':'A: ')+pair(match.teams[i]));const input=element('input');input.type='number';input.min='0';input.max='30';input.required=true;input.name=i?'b':'a';input.setAttribute('aria-label',`${match.id} ${i?'B':'A'} score`);input.placeholder=i?'7':String(state.target);if(correcting)input.value=match.score[i];label.append(input);cell.append(label);row.append(cell);}form.append(row);
+ if(correcting){const label=element('label','Why is this result changing?');const reason=element('textarea');reason.name='reason';reason.required=true;reason.maxLength=200;reason.setAttribute('aria-label',`${match.id} correction reason`);label.append(reason);form.append(label);}
+ const button=element('button',correcting?'Confirm correction':'Record completed result');button.type='submit';form.append(button);
+ form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const values=new FormData(form);guarded(async()=>{await write('record_result',{session_id:state.session_id,expected_version:state.version,match_id:match.id,a:Number(values.get('a')),b:Number(values.get('b')),correction_reason:correcting?String(values.get('reason')):''});});});return form;
+}
+function render(){
+ renderPlan();$('courts').replaceChildren();$('results').replaceChildren();$('audit').replaceChildren();
+ if(state){
+  $('nightTitle').textContent='Club night · '+state.players.length+' players';$('version').textContent='Desk version '+state.version;$('roundNumber').textContent=state.round;
+  const completed=state.matches.filter(m=>m.status==='completed');$('finished').textContent=completed.length;const counts=Object.values(state.completed_games);$('gap').textContent=Math.max(...counts)-Math.min(...counts);
+  const chips=element('div',undefined,'players');for(const player of state.players)chips.append(element('span',`${player} · ${state.completed_games[player]}`,'player'));$('participation').replaceChildren(chips);
+  for(const match of state.matches.filter(m=>m.status==='pending')){const card=element('div',undefined,'court');card.append(element('div',`Round ${match.round} · Court ${match.court}`,'eyebrow'),scoreForm(match));$('courts').append(card);}
+  if(!$('courts').children.length)$('courts').append(element('div','The courts are clear. Preview your next round.','empty'));
+  for(const match of [...completed].reverse()){const details=element('details');const title=element('summary');title.append(element('span',`${match.id} · ${pair(match.teams[0])} / ${pair(match.teams[1])} `,'result-title'),element('span',`${match.score[0]} – ${match.score[1]}`,'result-score'));details.append(title,scoreForm(match,true));$('results').append(details);}
+  if(!completed.length)$('results').append(element('p','Completed results will appear here.','muted small'));
+  for(const event of state.audit){const li=element('li');li.append(element('b','v'+event.version));let text=event.action.replaceAll('_',' ');if(event.match_id)text+=' · '+event.match_id;if(event.new_score)text+=' · '+(event.old_score?event.old_score.join('–')+' → ':'')+event.new_score.join('–');if(event.reason)text+=' · '+event.reason;li.append(document.createTextNode(text));$('audit').append(li);}
+ }
+ renderButtons();
+}
+$('createForm').addEventListener('submit',event=>{event.preventDefault();guarded(async()=>{await write('create_session',{players:$('players').value.split(',').map(x=>x.trim()).filter(Boolean),courts:Number($('courtCount').value),target:Number($('target').value)});proposal=null;notice('Club night created. Preview your first round.');});});
+$('preview').addEventListener('click',()=>guarded(async()=>{notice('Comparing fair next-round options…');proposal=await tool('plan_next_round',{session_id:state.session_id});notice('Round preview ready. Check the pairs and resting players, then confirm.');}));
+$('commit').addEventListener('click',()=>guarded(async()=>{await write('commit_round',{session_id:state.session_id,expected_version:proposal.expected_version,preview_hash:proposal.preview_hash});proposal=null;notice('Round confirmed. The courts are ready.');}));
+$('refresh').addEventListener('click',()=>guarded(async()=>{accept(await tool('get_session',{session_id:state.session_id}));notice('Desk refreshed.');}));
+$('retry').addEventListener('click',()=>guarded(async()=>{const result=await tool(lastWrite.name,lastWrite.args);accept(result.state);notice(result.replayed?'Already saved. The retry made no duplicate change.':'The original request is now saved.');}));
+async function boot(){
+ try{const result=await rpc('initialize',{protocolVersion:'2025-11-25',capabilities:{},clientInfo:{name:'RallyDeskBrowser',version:'0.1.0'}});if(result.protocolVersion!=='2025-11-25')throw Error('The expected MCP protocol was not negotiated.');await rpc('notifications/initialized',{},true);const tools=await rpc('tools/list');$('connection').textContent=`${result.serverInfo.name} · MCP ${result.protocolVersion} · ${tools.tools.length} discovered tools · actual Streamable HTTP requests`;ready=true;
+ const previous=localStorage.getItem('rallyDeskSession');if(previous){try{accept(await tool('get_session',{session_id:previous}));notice('Your local club desk is ready.');}catch{localStorage.removeItem('rallyDeskSession');notice('Connected. Start a new club night.');}}else notice('Connected. Start a club night when you are ready.');
+ }catch(e){notice(e.message,true);}render();
+}
+boot();
+</script>
+</html>

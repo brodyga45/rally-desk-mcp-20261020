@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+*.sqlite3*
+dependency-install-*.json
+domain-validation-v*.json
+http-validation-v*.json
+evidence/
+*.zip
+*.mp4
+publication-manifest.json
