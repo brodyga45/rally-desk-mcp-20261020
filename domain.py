@@ -63,7 +63,7 @@ def arrangements(players):
 
 def preview(data, version):
     if any(match["status"] == "pending" for match in data["matches"]):
-        raise Conflict("Finish or cancel the current round before planning another")
+        raise Conflict("Complete every match in the current round before planning another; cancellation is not supported")
     if data["round"] >= 100:
         raise ValueError("This local session has reached its 100-round limit")
     games, partners, opponents = statistics(data)

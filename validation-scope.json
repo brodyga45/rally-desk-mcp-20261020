@@ -53,5 +53,17 @@
   ],
   "new_cash_spend": 0,
   "live_language_model_calls": 0,
-  "allocated_compute_and_agent_cost": null
+  "allocated_compute_and_agent_cost": null,
+  "baseline_commit": "b64d4e3d81869b51485f835e63e45ebd279976b1",
+  "post_review_correction": {
+    "at_utc": "2026-10-21T19:51:01.547408+00:00",
+    "finding": "Rasp RD-01 P2: error suggested unsupported cancellation",
+    "change": "Pending-round error now requires completion of every match and explicitly states cancellation is unsupported. No cancellation feature added.",
+    "file": "domain.py",
+    "sha256": "626ce5a3a51f9d53f6f8f89cb8769c9552b6d23f0c3dbe71baafa2233d279e9e",
+    "only_error_literal_changed_AST_verified": true,
+    "historical_code_sha256_and_checks": "Original code_sha256 and runtime checks above describe baseline_commit, not a newly rerun suite.",
+    "new_runtime_or_full_suite_runs": 0,
+    "reviewer": "Rasp reviewed baseline; requested minimum text correction applied by successor, no fresh independent approval claimed."
+  }
 }
